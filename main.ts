@@ -20,6 +20,8 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             `)
     } else if (receivedString == "F") {
+        motor.MotorRun(motor.Motors.M1, motor.Dir.CW, 101)
+        motor.MotorRun(motor.Motors.M2, motor.Dir.CW, 101)
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -28,6 +30,8 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             `)
     } else if (receivedString == "B") {
+        motor.MotorRun(motor.Motors.M1, motor.Dir.CCW, 101)
+        motor.MotorRun(motor.Motors.M2, motor.Dir.CCW, 101)
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -36,6 +40,8 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             `)
     } else if (receivedString == "L") {
+        motor.MotorRun(motor.Motors.M1, motor.Dir.CCW, 101)
+        motor.MotorRun(motor.Motors.M2, motor.Dir.CW, 101)
         basic.showLeds(`
             . . # . .
             . # . . .
@@ -44,6 +50,8 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             `)
     } else if (receivedString == "R") {
+        motor.MotorRun(motor.Motors.M1, motor.Dir.CW, 101)
+        motor.MotorRun(motor.Motors.M2, motor.Dir.CCW, 101)
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -52,6 +60,7 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             `)
     } else {
+        motor.motorStopAll()
         basic.showLeds(`
             . . . . .
             . # # # .
